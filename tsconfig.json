@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "module": "ES2022",
+    "target": "ES2022",
+    "lib": ["ES2022", "dom"],
+    "experimentalDecorators": true
+  }
+}

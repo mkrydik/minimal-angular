@@ -1,0 +1,46 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "minimal-angular": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component"  : { "skipTests": true, "inlineTemplate": true, "inlineStyle": true },
+        "@schematics/angular:class"      : { "skipTests": true },
+        "@schematics/angular:directive"  : { "skipTests": true },
+        "@schematics/angular:guard"      : { "skipTests": true },
+        "@schematics/angular:interceptor": { "skipTests": true },
+        "@schematics/angular:pipe"       : { "skipTests": true },
+        "@schematics/angular:resolver"   : { "skipTests": true },
+        "@schematics/angular:service"    : { "skipTests": true }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "docs",
+            "index"     : "src/index.html",
+            "main"      : "src/main.ts",
+            "tsConfig"  : "tsconfig.json",
+            "polyfills" : ["zone.js"]
+          },
+          "defaultConfiguration": "production",
+          "configurations": {
+            "production" : { "extractLicenses": false }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "defaultConfiguration": "production",
+          "configurations": {
+            "production" : { "browserTarget": "minimal-angular:build:production"  }
+          }
+        }
+      }
+    }
+  }
+}
