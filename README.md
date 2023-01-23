@@ -2,6 +2,8 @@
 
 Angular プロジェクト、どこまで小さく作れるか挑戦。
 
+- [GitHub Pages - Minimal Angular](https://mkrydik.github.io/minimal-angular/)
+
 以下の環境で動作確認しました。
 
 - WSL2 Ubuntu v20.04.5 : Node.js v18.12.1 : npm v8.19.2
